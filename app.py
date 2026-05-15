@@ -816,8 +816,9 @@ def cmd_send_monthly():
     else:
         print(f"[{year}/{month}] 推播失敗：{resp}")
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     if len(sys.argv) > 1:
         if sys.argv[1] == "send-daily":
             cmd_send_daily()
